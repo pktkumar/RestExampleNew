@@ -36,13 +36,26 @@ public class MyController {
      */
     @Scheduled(cron = "*/10 * * * * *")
     public void myCron() {
-        String url = "http://localhost:8080/Test";
-        RestTemplate restTemplate = new RestTemplate();
-        String str = restTemplate.getForObject(url, String.class);
 
-        System.out.println(str);
+
+        System.out.println("calling Scheduler for every 10 Secs" + new Date());
 
     }
+
+
+// to call another API which running in 8080 port
+
+
+//     @Scheduled(cron = "*/10 * * * * *")
+//    public void myCron() {
+//        String url = "http://localhost:8080/Test";
+//        RestTemplate restTemplate = new RestTemplate();
+//        String str = restTemplate.getForObject(url, String.class);
+//
+//        System.out.println(str);
+//
+//    }
+
 
 
 
